@@ -4,10 +4,11 @@ import Settings from "./src/library/Settings";
 import VoluumApi from "./src/library/VoluumApi";
 import dayjs from "dayjs";
 
+require('console.table');
 const commander = require("commander");
 
-commander.command("stats [from] [till]")
-    .alias("s")
+commander.command("total-stats [from] [till]")
+    .alias("ts")
     .description("Retrieve overall campaign stats. Defaults to today.")
     .action((from?: string, till?: string) => {
         const startDate = from !== undefined ? dayjs(from) : dayjs();
@@ -16,7 +17,7 @@ commander.command("stats [from] [till]")
         const voluumApi = new VoluumApi(Settings.getVoluumSettings());
 
         voluumApi.getTotalStats(startDate, endDate).then((stats) => {
-            console.log(stats);
+            console.table(stats);
         });
     });
 
