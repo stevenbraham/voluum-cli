@@ -1,0 +1,32 @@
+{
+  "name": "voluum-cli",
+  "version": "1.0.0",
+  "description": "Voluum CLI tool",
+  "main": "index.js",
+  "bin": {
+    "voluum-cli": "./index.js"
+  },
+  "preferGlobal": true,
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "./node_modules/.bin/tsc index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenbraham/voluum-cli.git"
+  },
+  "author": "Steven Braham <steven@braham.biz>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/stevenbraham/voluum-cli/issues"
+  },
+  "homepage": "https://github.com/stevenbraham/voluum-cli#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.23",
+    "ts-node-dev": "^1.0.0-pre.52",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "commander": "^6.0.0"
+  }
+}
