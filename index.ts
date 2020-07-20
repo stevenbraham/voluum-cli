@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import Settings from "./src/llibrary/Settings";
+import Settings from "./src/library/Settings";
 
 const commander = require("commander");
 
