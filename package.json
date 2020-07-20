@@ -22,12 +22,16 @@
   },
   "homepage": "https://github.com/stevenbraham/voluum-cli#readme",
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/node": "^14.0.23",
+    "@types/yaml": "^1.9.7",
     "ts-node-dev": "^1.0.0-pre.52",
     "typescript": "^3.9.7"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "commander": "^6.0.0",
+    "dayjs": "^1.8.29",
     "yaml": "^1.10.0"
   }
 }
